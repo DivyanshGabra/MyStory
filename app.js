@@ -3,8 +3,7 @@ const ejs = require("ejs");
 const app = express();
 const mongoose = require("mongoose");
 
-mongoose.connect(
-  "mongodb+srv://divyansh_gabra:6kGkgjrr2N9LPOGr@cluster0.h5vocpi.mongodb.net/BlogDB",
+mongoose.connect("mongodb+srv://divyansh_gabra:6kGkgjrr2N9LPOGr@cluster0.h5vocpi.mongodb.net/BlogDB",
   { useNewUrlParser: true }
 );
 
@@ -19,9 +18,6 @@ const Post = mongoose.model("Post", postSchema);
 
 const homeStartingContent = `Welcome to our online journal, a digital space for self-exploration, connection, and growth. Our journal is a platform for individuals who seek to delve deeper into their thoughts, feelings, and experiences. Here, you will find a collection of stories, insights, and perspectives from a diverse group of contributors. Our goal is to provide a space where readers can connect with themselves and others, find inspiration, and gain a deeper understanding of themselves and the world around them.
 We believe that everyone has a unique story to tell, and that sharing our stories can help us connect with each other and find meaning in our lives. Our journal is a space where individuals can share their personal journeys, struggles, and triumphs.
-`;
-
-const aboutContent = `I am Divyansh Gabra from Gwalior, Madhya Pradesh, India. Currently I am pursuing B.Tech from VIT Bhopal. I am currently learning how to develop and design websites and web applications.This Daily Journal is a part of the list of projects I am going to make during this course. I hope everyone has a great time using the "Daily Journal".
 `;
 
 const contactContent =
@@ -60,8 +56,7 @@ app.post("/compose", (req, res) => {
     content: content,
   });
 
-  newPost
-    .save()
+  newPost.save()
     .then(function (post) {
       res.redirect("/blog");
     })
