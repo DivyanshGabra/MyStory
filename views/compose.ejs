@@ -1,0 +1,47 @@
+
+<div class="wrapper">
+    <%- include('partials/header') %>
+    <style>
+      body{
+        overflow: hidden;
+      }
+    </style>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"/>    
+      <div class="content"></div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-10">
+              <div class="row justify-content-center">
+               <center><div class="heading mb-4">
+                  <h3>Let's talk about everything!</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas debitis, fugit natus?</p>
+                </div></center>
+                <div class="col-md-6">
+                  <p><img src="images/compose-1.png" alt="Image" class="img-fluid" /></p>
+                </div>
+                <div class="col-md-6 box1" >
+                  <form action="/compose" class="mb-5" method="post" id="contactForm" name="contactForm"> 
+  
+                    <div class="row">
+                      <div class="col-md-12 form-group">
+                        <input type="text" class="form-control" name="title" id="subject" placeholder="Title"/>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 form-group">
+                        <textarea class="form-control" name="post" id="post" cols="30" rows="7" placeholder="Start Writing...."></textarea>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <center><button class="glow-on-hover" type="submit">Publish</button></center>
+                        <span class="submitting"></span>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

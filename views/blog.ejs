@@ -1,0 +1,25 @@
+<div class="wrapper">
+    <%- include('partials/header') %>
+
+    <div class="row-m-1">
+        <div class="col-md-4" >
+            <%  posts.forEach(function(post){ %>
+
+                <div class="blog" >
+                    <h4 id="title-blog"><%=post.title%></h4>
+                    <h6><%  let postContent = post.content; %>
+                        <% postContent = postContent.slice(0,100) + "...";%></h6>
+                                    
+                        <p id="show"><%= postContent  %></p>
+                        <a id="post-blog" href= "/posts/<%=post._id%>">Read More</a>
+                        <button type="submit">X</button>
+                </div>
+
+            <% }) %>
+                        
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>
+    
+</div>
